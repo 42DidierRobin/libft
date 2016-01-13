@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/13 15:49:23 by rdidier           #+#    #+#             */
-/*   Updated: 2016/01/13 16:13:38 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/01/13 17:35:19 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int			ft_str_find_char(const char *str, char c)
 	{
 		if (str[i] == c)
 			return (1);
+		i++;
 	}
 	return (-1);
 }
