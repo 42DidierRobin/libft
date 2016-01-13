@@ -6,7 +6,7 @@
 #    By: rdidier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 10:18:07 by rdidier           #+#    #+#              #
-#    Updated: 2015/12/05 10:08:46 by rdidier          ###   ########.fr        #
+#    Updated: 2016/01/13 15:54:48 by rdidier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SOURCES = ft_putchar.c		\
 		ft_strnstr.c		\
 		ft_strcmp.c			\
 		ft_strncmp.c		\
+		ft_str_find_char.c	\
 		ft_atoi.c			\
 		ft_memalloc.c		\
 		ft_memdel.c			\

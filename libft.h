@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:22:28 by rdidier           #+#    #+#             */
-/*   Updated: 2015/12/14 22:11:08 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/01/13 15:54:02 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_str_find_char(const char *str, char c);
 int					ft_atoi(const char *s);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
