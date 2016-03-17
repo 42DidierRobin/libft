@@ -6,7 +6,7 @@
 #    By: rdidier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 10:18:07 by rdidier           #+#    #+#              #
-#    Updated: 2016/01/13 15:54:48 by rdidier          ###   ########.fr        #
+#    Updated: 2016/03/17 10:55:55 by rdidier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
-SOURCES = ft_putchar.c		\
+SOURCES = get_next_line.c	\
+		ft_putchar.c		\
 		ft_putchar_fd.c		\
 		ft_putstr.c			\
 		ft_putstr_fd.c		\

@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:22:28 by rdidier           #+#    #+#             */
-/*   Updated: 2016/01/13 15:54:02 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/17 10:56:34 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct		s_btree
 	struct s_btree	*left;
 }					t_btree;
 
+int					get_next_line(int const fd, char **line);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr(char *str);
