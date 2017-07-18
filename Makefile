@@ -13,6 +13,8 @@
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
 OBJDIR = obj
+SRCDIR = src
+INCDIR = includes
 
 SOURCES = gnl/get_next_line.c		\
 	  print/ft_putchar.c		\
@@ -80,20 +82,22 @@ SOURCES = gnl/get_next_line.c		\
 	  btree/ft_btree_mapinf.c	\
 	  btree/ft_btree_strprint.c
 
+SRCS = $(addprefix $(SRCDIR)/, $(SOURCES))
 OBJECTS = $(addprefix $(OBJDIR)/,$(patsubst %.c,%.o,$(SOURCES)))
-
+OBJECTS_DIRS = $(sort $(dir $(OBJECTS)))
+INCS = $(addprefix -I, $(INCDIR))
 
 all : $(NAME)
-
-$(NAME) : 
-	gcc $(FLAGS) -c $(SOURCES) 
-	ar rc $(NAME) $(OBJECTS)
-	ranlib $(NAME)
-
+$(NAME) : build $(OBJECTS) 
+	@ar rc $(NAME) $(OBJECTS)
+	@ranlib $(NAME)
+build: 
+	@mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJECTS_DIRS)
 clean : 
 	/bin/rm -f $(OBJECTS)
-
 fclean : clean
 	/bin/rm -f $(NAME)
-
-re : fclean all 
+re : fclean all
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+		@gcc -c -o $@ $< $(INCS) $(FLAGS)
