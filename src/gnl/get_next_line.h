@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 12:05:10 by rdidier           #+#    #+#             */
-/*   Updated: 2015/12/14 21:57:21 by rdidier          ###   ########.fr       */
+/*   Created: 2015/12/01 12:24:40 by rdidier           #+#    #+#             */
+/*   Updated: 2016/03/17 11:03:32 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#ifndef __GET_NEXT_LINE_H
+# define __GET_NEXT_LINE_H
 
-void		ft_strclr(char *str)
+# include "../includes/libft.h"
+# include <stdlib.h>
+# include <sys/uio.h>
+# include <sys/types.h>
+
+# define BUFF_SIZE 32
+
+typedef struct		s_gnld
 {
-	size_t	length;
+	int				fd;
+	char			*buff;
+	struct s_gnld	*next;
+}					t_gnld;
 
-	if (str)
-	{
-		length = ft_strlen(str);
-		ft_bzero((void*)str, length);
-	}
-}
+int					get_next_line(int const fd, char **line);
+
+#endif
